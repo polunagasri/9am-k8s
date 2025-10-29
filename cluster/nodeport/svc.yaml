@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: nodeport-svc
+spec:
+  type: Nodeport
+  selector:
+    app: test-1
+  ports:
+    - port: 80
+      nodeport: 32000
+          
